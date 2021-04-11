@@ -1,0 +1,80 @@
+//create customer table
+
+CREATE TABLE Customer (
+    CustomerID int(10) NOT NULL AUTO_INCREMENT,
+    Name varchar(255) NOT NULL,
+    Email varchar(255) NOT NULL,
+    Balance REAL NOT NULL,
+    Operation varchar(100) NOT NULL,
+    PRIMARY KEY (CustomerID)
+)ENGINE=InnoDB;
+
+Column name:- select CustomerID,Name,Email,Balance,Operation from Customer;
+
+
+
+
+
+//create table Transcation
+
+
+CREATE TABLE Transcation (
+	ID int(10) NOT NULL AUTO_INCREMENT,
+	Sender_Name varchar(255) NOT NULL,
+	Reciever_Name varchar(255) NOT NULL,
+	Amount REAL NOT NULL,
+	Time DATETIME DEFAULT CURRENT_TIMESTAMP,
+	Status varchar(255) NOT NULL,
+	PRIMARY KEY (ID)
+)ENGINE=InnoDB;
+
+Column name:- select ID,Sender_Name,Reciever_Name,Amount,Time,Status from Transcation;
+
+
+
+
+
+
+//create table for helpdesk
+
+CREATE TABLE helpdesk (
+	ID int(10) NOT NULL AUTO_INCREMENT,
+	Name varchar(255),
+	Email varchar(255),
+	MobileNo int(20) ,
+	Time DATETIME DEFAULT CURRENT_TIMESTAMP,
+	Subject varchar(255),
+	PRIMARY KEY (ID)
+)ENGINE=InnoDB;
+
+Column name:- select ID,Name,Email,MobileNo,Time,Subject from helpdesk;
+
+
+
+
+
+//Query to insert it into the database table customer......(dummy entries)
+
+ INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Mohnish","mohnish@gmail.com",100000,"Send Money");
+
+ INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Sahil","sahih@gmail.com",90000.00,"Send Money");
+
+3)INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Jugal","jugal55@gmail.com",80000.25,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Rohan","rohan45@gmail.com",70000.89,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Mohan","mohan@gmail.com",60000.50,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Kartik","kartik@gmail.com",50000.45,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Varun","varun23@gmail.com",40000.99,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Dinesh","dinesh23@gmail.com",30000.78,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("Jack","jack@gmail.com",20000.60,"Send Money");
+
+  INSERT INTO `customer`( `Name`, `Email`, `Balance`, `Operation`) VALUES ("William","willam@gmail.com",10000.70,"Send Money");
+
+//Query to insert it into the database table customer......
+
+1) INSERT INTO `transcation`(`Sender_Name`, `Reciever_Name`, `Amount`, `Status`) VALUES ("Jugal","Mohnish",2000,"Suucess");
